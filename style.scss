@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #eaebf5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 470px;
+  height: 740px;
+  border-radius: 17px;
+  box-shadow: 0px 15px 6px -1px rgba(75, 75, 100, 0.5);
+
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 75px 80px;
+    width: 100%;
+
+    h2 {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 36px;
+    }
+
+    form {
+      width: 100%;
+      margin-bottom: 15px;
+
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-bottom: 36px;
+
+        label {
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid #aeb8d9;
+          border-radius: 7px;
+          padding: 26px 20px;
+          font-size: 16px;
+        }
+
+        .error-msg {
+          color: red;
+          font-size: 12px;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        font-size: 16px;
+        border: 1px solid #aab0c4;
+        border-radius: 7px;
+        // background: #4c5ee5;
+        color: #fff;
+        padding: 26px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s;
+        overflow: hidden;
+        display: inline-block;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #4c5ee5;
+          border-radius: 7px;
+          z-index: -2;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          background-color: darken(#4c5ee5, 15%);
+          transition: all 0.3s;
+          border-radius: 7px;
+          z-index: -1;
+        }
+
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    .legals {
+      font-size: 14px;
+      margin-bottom: 38px;
+    }
+
+    .socials-text {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .socials-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        width: 73px;
+        height: 60px;
+        background: transparent;
+        border: 1px solid #aeb8d9;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: transform 300ms ease-out;
+
+        &:hover {
+          background-color: #4c5ee5;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

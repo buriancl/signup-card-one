@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #eaebf5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 470px;
+  height: 740px;
+  border-radius: 17px;
+  box-shadow: 0px 15px 6px -1px rgba(75, 75, 100, 0.5);
+}
+.card .signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 75px 80px;
+  width: 100%;
+}
+.card .signup-container h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+.card .signup-container form {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.card .signup-container form .input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-bottom: 36px;
+}
+.card .signup-container form .input-container label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card .signup-container form .input-container input {
+  width: 100%;
+  border: 1px solid #aeb8d9;
+  border-radius: 7px;
+  padding: 26px 20px;
+  font-size: 16px;
+}
+.card .signup-container form .input-container .error-msg {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.card .signup-container form .input-container .error-msg.active {
+  display: block;
+}
+.card .signup-container form button {
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #aab0c4;
+  border-radius: 7px;
+  color: #fff;
+  padding: 26px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+  overflow: hidden;
+  display: inline-block;
+}
+.card .signup-container form button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4c5ee5;
+  border-radius: 7px;
+  z-index: -2;
+}
+.card .signup-container form button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #1d31c8;
+  transition: all 0.3s;
+  border-radius: 7px;
+  z-index: -1;
+}
+.card .signup-container form button:hover:before {
+  width: 100%;
+}
+.card .signup-container form button:active {
+  transform: scale(0.9);
+}
+.card .signup-container .legals {
+  font-size: 14px;
+  margin-bottom: 38px;
+}
+.card .signup-container .socials-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card .signup-container .socials-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .signup-container .socials-container button {
+  width: 73px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid #aeb8d9;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: transform 300ms ease-out;
+}
+.card .signup-container .socials-container button:hover {
+  background-color: #4c5ee5;
+}
+.card .signup-container .socials-container button:active {
+  transform: scale(0.9);
+}
+.card .signup-container .socials-container button i {
+  font-size: 24px;
+}
